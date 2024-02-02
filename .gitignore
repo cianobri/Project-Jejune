@@ -449,4 +449,9 @@ $RECYCLE.BIN/
 *.lnk
 
 # Project Specific
+*.mat
+*.asset
+*.unity
+*.renderTexture
+
 
