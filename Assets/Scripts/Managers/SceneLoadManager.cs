@@ -43,7 +43,7 @@ public class SceneLoadManager : MonoBehaviour
         playerRotation = rotation;
         playerIsActive = playerSceneActive;
 
-        Debug.Log(playerPosition);
+
 
         if (sceneChanging)
         {
@@ -86,10 +86,10 @@ public class SceneLoadManager : MonoBehaviour
 
     IEnumerator UnloadSceneAsync()
     {
-        Debug.Log("1");
+
         if (sceneToUnload != null && sceneToUnload.isLoaded)
         {
-            Debug.Log("Unloading scene: " + sceneToUnload.name);
+            
             AsyncOperation asyncUnload = SceneManager.UnloadSceneAsync(sceneToUnload.name);
             while (!asyncUnload.isDone)
             {
@@ -102,7 +102,7 @@ public class SceneLoadManager : MonoBehaviour
 
     IEnumerator LoadSceneAdditive()
     {
-        Debug.Log("Loading scene: " + sceneNameToLoad);
+        
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneNameToLoad, LoadSceneMode.Additive);
 
         while (!asyncLoad.isDone)
@@ -112,7 +112,7 @@ public class SceneLoadManager : MonoBehaviour
 
         // Load the AStar graph.s
 		TextAsset asset = Resources.Load("AStarGraphs/" + sceneNameToLoad) as TextAsset;
-        Debug.Log("AStarGraphs/" + sceneNameToLoad);
+        
 		if (asset != null)
 		{
 			AstarPath.active.astarData.DeserializeGraphs(asset.bytes);
@@ -120,7 +120,7 @@ public class SceneLoadManager : MonoBehaviour
 		{
 			Debug.Log("WARNING: Graph asset is null.");
 		}
-        Debug.Log("2");
+
         // New scene is now loaded, enable player and set position.
         Scene playerScene = SceneManager.GetSceneByName("PlayerScene");
 
@@ -137,16 +137,15 @@ public class SceneLoadManager : MonoBehaviour
             // We've checked that the scene is active.
             Player.instance.gameObject.SetActive(true);
 
-            Debug.Log("Checking playerposition.");
+
             if (playerPosition != null && playerRotation != null)
             {
-                Debug.Log("Setting playerposition:" + playerPosition);
                 Player.instance.transform.position = playerPosition;
                 Player.instance.transform.rotation = Quaternion.Euler(playerRotation);
             }
             
         }
-        Debug.Log("3");
+
         //yield return new WaitForSeconds(transitionHoldTimeSec);
         AsyncOperation asyncUnload = SceneManager.UnloadSceneAsync(sceneLoadName);
 
@@ -154,7 +153,7 @@ public class SceneLoadManager : MonoBehaviour
         {
             yield return null;
         }
-        Debug.Log("4");
+
         MouseInputParser.instance.Refresh();
         activeSceneName = sceneNameToLoad;
         GameManager.instance.currentGameState = GameManager.GameState.Exploration;

@@ -19,18 +19,19 @@ public class LockedDoorWithDialogueInteractable : MonoBehaviour, IInteractable
 
     [SerializeField] string inkUnlockVarName;
     [SerializeField] bool isInteractableActive = false;
-    [SerializeField] bool isOpen = false;
+    
     [SerializeField] bool playerActiveInNewScene = true;
 
     void Start()
     {
         character = GetComponent<Character>();
 
+        // I'll leave this here for future reference:
         // Observe the ink-variable.
-        InkManager.instance.story.ObserveVariable(inkUnlockVarName, (variableName, newValue) =>
-        {
-            isOpen = (bool)newValue;
-        });
+        //InkManager.instance.story.ObserveVariable(inkUnlockVarName, (variableName, newValue) =>
+        //{
+        //    isOpen = (bool)newValue;
+        //});
     }
 
     public void SetInteractableActive()
@@ -78,12 +79,15 @@ public class LockedDoorWithDialogueInteractable : MonoBehaviour, IInteractable
 
     public void OnInteraction()
     {
-        if (isOpen == false)
+        bool doorOpen = (bool)InkManager.instance.story.variablesState[inkUnlockVarName];
+        if (!doorOpen)
         {
+            // Door in NOT open.
             EnableAndSetDialogue(character.inkName);
             GameManager.instance.currentGameState = GameManager.GameState.Dialogue;
         } else
         {
+            // Door is open, load the new scene.
             SceneLoadManager.instance.LoadNewScene(gameObject.scene, sceneNameToLoad, playerPosition, playerRotation, playerActiveInNewScene);
         }
     }

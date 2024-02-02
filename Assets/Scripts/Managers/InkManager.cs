@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
 using UnityEngine.Events;
+using Ink;
+using System;
 public class InkManager : MonoBehaviour
 {
     public static InkManager instance;
@@ -14,6 +16,10 @@ public class InkManager : MonoBehaviour
 	public string currentKnot;
 
 	public UnityEvent knotFound;
+
+	string tagDelimiter = "."; // sfx.file will play the sound "file".
+	string playSfxTag = "sfx";
+
     void Awake()
     {
 		if (instance != null && instance != this)
@@ -33,10 +39,10 @@ public class InkManager : MonoBehaviour
 		
 		if (story == null)
 		{
-			Debug.Log("ERROR: Ink story is null!");
+			//Debug.Log("ERROR: Ink story is null!");
 		} else
 		{
-			Debug.Log("Ink loaded successfully.");
+			//Debug.Log("Ink loaded successfully.");
 			story.Continue();
 			//LogStoryState();
 			//currentKnot = story.state.currentPathString;
@@ -45,7 +51,6 @@ public class InkManager : MonoBehaviour
 	}
     public void GoToKnot(string name)
 	{
-		Debug.Log("4 " + name);
 		ContinueStory();
 		//story.ChoosePathString("Main"); 
 		//Debug.Log(story.currentChoices.Count);
@@ -65,11 +70,30 @@ public class InkManager : MonoBehaviour
 		}
 		
 	}
+	public void TagHandler(List<string> tags)
+	{
+		// Handles action for Ink tags, for example playing sound effects.
+
+		if (tags.Count > 0)
+		{
+			for (int i=0; i <= tags.Count; i++)
+			{
+				string[] parsedTag = tags[i].Split(tagDelimiter);
+
+				// Play sound effect.
+				if (parsedTag[0] == playSfxTag)
+				{
+					AudioManager.instance.TryPlaySoundEffect(parsedTag[1]);
+				}
+			}
+		}
+
+	}
 
     public void ContinueStory(){
-		
 		if (story.canContinue){
-			story.ContinueMaximally();
+			//story.ContinueMaximally();
+			story.Continue();
 		}
 	}
     

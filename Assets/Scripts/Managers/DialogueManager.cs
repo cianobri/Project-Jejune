@@ -37,7 +37,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (scene.name == dialogueSceneName)
         {
-            // Set the ink mamager to the right dialogue.
+            // Set the ink manager to the right dialogue.
             InkManager.instance.GoToKnot(currentInkName);
         }
     }

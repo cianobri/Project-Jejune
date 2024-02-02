@@ -28,6 +28,10 @@ public class DialogueUI : MonoBehaviour
         
         textDisplayArea.text = GetNextStoryBlock();
 
+        // Why does this have to be here? Why cant I put it in the InkManager? Not even in the function which this itself calls???
+        // What the FUCK??????????? TODO TODO TODO
+        InkManager.instance.TagHandler(InkManager.instance.story.currentTags);
+
         currentChoices = InkManager.instance.GetCurrentChoices();
 
         if (textDisplayArea.text.Trim() == "Main")

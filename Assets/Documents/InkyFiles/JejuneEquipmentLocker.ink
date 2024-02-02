@@ -1,5 +1,5 @@
 === JejuneEquipmentLocker
-electrons
+electrons #sfx.testDoorUnlock
 + [Pickup the crowbar.] -> PickupCrowbar
 + [Pickup the scissors.] -> PickupScissors
 + [Pickup the masking tape.] -> PickupMaskingTape

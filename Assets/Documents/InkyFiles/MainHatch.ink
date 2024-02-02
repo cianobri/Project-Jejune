@@ -15,7 +15,7 @@ The hatch is locked.
 + [Return.] -> MainHatch
 
 == TryOpenHatchUnlocked
-The hatch opens with an ominous groan, as if the {distressedVesselName} is unhappy to see you.
+The hatch opens with an ominous groan, as if the {distressedVesselName} is unhappy to see you. #sfx.testDoorUnlock
 ~ mainHatchOpen = true
 + [Return] -> Main
 
