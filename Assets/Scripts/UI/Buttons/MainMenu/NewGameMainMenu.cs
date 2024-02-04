@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewGameMainMenu : MonoBehaviour
+public class NewGameMainMenu : ClickableButton
 {
     [SerializeField] Vector3 playerInitialPosition = new Vector3(0.0f, 0.929f, 0.0f);
     [SerializeField] Vector3 playerInitialRotation = Vector3.zero;

@@ -1,3 +1,0 @@
-=== Dove
-DDD
-+ [d] -> Main

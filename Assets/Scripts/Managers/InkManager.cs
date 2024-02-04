@@ -76,7 +76,7 @@ public class InkManager : MonoBehaviour
 
 		if (tags.Count > 0)
 		{
-			for (int i=0; i <= tags.Count; i++)
+			for (int i=0; i < tags.Count; i++)
 			{
 				string[] parsedTag = tags[i].Split(tagDelimiter);
 
@@ -93,7 +93,7 @@ public class InkManager : MonoBehaviour
     public void ContinueStory(){
 		if (story.canContinue){
 			//story.ContinueMaximally();
-			story.Continue();
+			story.ContinueMaximally();
 		}
 	}
     

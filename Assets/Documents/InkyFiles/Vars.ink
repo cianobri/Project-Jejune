@@ -9,6 +9,7 @@ VAR aiName = "Mormo"
 VAR officerName = "Griffin"
 VAR partner = "Alden"
 VAR partnerFullname = "Alden Caulfield"
+VAR antagonistName = "Ramanujan"
 
 // CHARACTER VARS
 VAR ftt2Partner = true // ftt2 = first time talking to
@@ -20,3 +21,12 @@ VAR mainHatchOpen = false
 VAR hasCrowbar = false
 VAR bangedOnHatch = false
 VAR pickedUpTool = "none"
+VAR aiStressLevel = 3 // High stress levels makes the AI talk nonsense.
+
+// TOPICS
+VAR topicLargeKernelModel = false
+VAR topicLatentSpace = false
+VAR topicEigenFace = false
+VAR topicSimulateYou = false
+// MISC
+VAR playersWindowsName = "All"

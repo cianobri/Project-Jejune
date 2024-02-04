@@ -1,5 +1,6 @@
 
 === Introduction ===
+#bgm:introduction
 {Somewhere, high above the Indian ocean. | Init.NATO_RFprotocol.IP.ping ...SUCCESS!}
 * [Where the sky is black.] -> Handshake
 + {Handshake} [Commence handshake.] -> MetalGroan

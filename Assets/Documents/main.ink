@@ -3,12 +3,17 @@ INCLUDE InkyFiles/Alden.ink
 INCLUDE InkyFiles/Vars.ink
 INCLUDE InkyFiles/AldensTerminal.ink
 INCLUDE InkyFiles/theAI.ink
-INCLUDE InkyFiles/Dove.ink
 INCLUDE InkyFiles/MainDoorIntercom.ink
 INCLUDE InkyFiles/MainHatch.ink
 INCLUDE InkyFiles/MainHatchMechanism.ink
 INCLUDE InkyFiles/JejuneEquipmentLocker.ink
 INCLUDE InkyFiles/Functions.ink
+INCLUDE InkyFiles/Officer.ink
+INCLUDE InkyFiles/Antagonist.ink
+INCLUDE InkyFiles/AiTopics.ink
+
+
+
 
 -> Main
 
@@ -17,15 +22,17 @@ Main
 // ACT 1.
 + [Introduction] -> Introduction
 + [Alden] -> Alden
-+ [AldensTerminal] -> AldensTerminal
+//+ [AldensTerminal] -> AldensTerminal
 + [JejuneEquipmentLocker] -> JejuneEquipmentLocker
 
 + [MainHatch] -> MainHatch
-+ [Dove] -> Dove
+//+ [Dove] -> Dove
 + [AI] -> theAI
++ [Officer] -> Officer
++ [Antagonist] -> Antagonist
 
-+ [Cube] -> Cube
-+ [Sphere] -> Sphere
+//+ [Cube] -> Cube
+//+ [Sphere] -> Sphere
 
 === Cube ===
 This is the Cube's knot.

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Load : MonoBehaviour
+public class Load : ClickableButton
 {
     // Start is called before the first frame update
     void Start()

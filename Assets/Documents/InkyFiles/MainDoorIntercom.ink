@@ -27,11 +27,12 @@ The intercom splutters intermittently; he's fumbling with the controls.
 + [...so can you open it?] -> CanYouOpenIt
 
 == CanYouOpenIt
-"To be honest, no I can't. There's somethign wrong with {aiName}, we we're hoping you could help us with that."
+"To be honest, no I can't. There's something wrong with {aiName}, we we're hoping you could help us with that."
 
 + ["{aiName}"? What's a "{aiName}"?] -> WhatsAI
 
 == WhatsAI
+~topicLargeKernelModel = true
 "Oh, sorry. {aiName} is our Large Kernel Model - our central control A.I. He's not really... taking orders right now. You'll have to open the hatch manually from your side."
 
 "There should be a mechanism to the right of the door, see if you can get the hatch open."
