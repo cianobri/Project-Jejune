@@ -10,7 +10,7 @@
 + [Return.] -> Main
 
 == TryOpenHatch
-The hatch is locked.
+There is no way you can open the hatch.
 + {hasCrowbar and mainHatchLocked} [Try to use the crowbar to open the hatch.] ->CrowbarHatch
 + [Return.] -> MainHatch
 
@@ -20,7 +20,7 @@ The hatch opens with an ominous groan, as if the {distressedVesselName} is unhap
 + [Return] -> Main
 
 == CrowbarHatch
-This was never going to work. You give the hatch a few half-hearted taps with the crowbar. 
+This was never going to work. You give the hatch a few half-hearted taps with the crowbar. #sfx.metalBanging
 ~bangedOnHatch = true
 {ftt2Officer: The intercom flashes green and you hear a disembodied voice.}-> MainDoorIntercom
 {not ftt2Officer:  "... can you stop that?"}

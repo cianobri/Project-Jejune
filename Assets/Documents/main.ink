@@ -16,12 +16,13 @@ INCLUDE InkyFiles/AiTopics.ink
 
 
 -> Main
-
+#main
 === Main ===
 Main
 // ACT 1.
 + [Introduction] -> Introduction
-+ [Alden] -> Alden
++ [Alden] 
+-> Alden
 //+ [AldensTerminal] -> AldensTerminal
 + [JejuneEquipmentLocker] -> JejuneEquipmentLocker
 

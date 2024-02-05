@@ -4,7 +4,8 @@
 
 ==TopicEigenFace
 "He's a baller."
-+ [Enough about that.] -> theAI [Why did you say you hate Eigen-Face?] -> WhyHateEigenFace
++ [Enough about that.] -> theAI 
++ [Why did you say you hate Eigen-Face?] -> WhyHateEigenFace
 + [Enough about that.] -> AskAboutTopic
 
 ==TopicLargeKernelModel

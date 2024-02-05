@@ -10,7 +10,7 @@ VAR officerName = "Griffin"
 VAR partner = "Alden"
 VAR partnerFullname = "Alden Caulfield"
 VAR antagonistName = "Ramanujan"
-
+VAR atmosphereDrName = "Techmuller"
 // CHARACTER VARS
 VAR ftt2Partner = true // ftt2 = first time talking to
 VAR ftt2Officer = true
@@ -22,7 +22,8 @@ VAR hasCrowbar = false
 VAR bangedOnHatch = false
 VAR pickedUpTool = "none"
 VAR aiStressLevel = 3 // High stress levels makes the AI talk nonsense.
-
+VAR officerCrying = false
+VAR knowAboutLeviIvanka = false // Levi & Ivanka got crushed in their bunks during the last altitude drop.
 // TOPICS
 VAR topicLargeKernelModel = false
 VAR topicLatentSpace = false

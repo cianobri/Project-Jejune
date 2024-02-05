@@ -9,7 +9,7 @@
 > [2113-10-05] Handshake received [COM_9]. Tunnelling...
 > ...
 > ...
-> Terminal link established with unknown vessel.
+> Terminal link established with unknown vessel. #sfx.computerSuccess
 + [Request CHECKSUM.] -> Checksum
 
 == Checksum ==
@@ -17,7 +17,7 @@
 + [Request register of the vessel {distressedVesselName}.] -> Register
 
 == MetalGroan
-{The Abukuma groans under the stress of contact. | The main engine of the Toeplitz subtly changes pitch.}
+{The Abukuma groans under the stress of contact. | The main engine of the Toeplitz subtly changes pitch.} #sfx.metalGroan
 + [Start communication uplink.] -> ComUplink
 + [Ship Register.] -> JejuneInfo
 + [Request Abukuma vessel register.] -> Register
@@ -108,11 +108,11 @@ ALTITUDE INFO: 108,234m above sea level [G ~ 9.47m/s^2].
 == ComUplink ==
 ... FAIL [Packet loss threshold exceeded]
 ... FAIL [Packet loss threshold exceeded]
-... FAIL [Packet loss threshold exceeded] 
+... FAIL [Packet loss threshold exceeded] #sfx.computerError
 + [Abort uplink.] -> MetalGroan
 
 == Docking ==
-Initializing...
+Initializing... #sfx.docking
 > pLock 1 SUCCESS!
 > pLock 2 SUCCESS!
 > pLock 3 SUCCESS!

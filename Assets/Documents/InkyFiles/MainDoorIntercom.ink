@@ -1,5 +1,5 @@
 === MainDoorIntercom
-{not bangedOnHatch:You touch the intercom{~ and it beeps in acknowledgement| and it hisses to life}.}
+{not bangedOnHatch:You touch the intercom{~ and it hisses in acknowledgement| and it hisses to life}.} #sfx:intercomHiss
 
 {not bangedOnHatch:{~Moments later,|After a beat,} a voice fills the air-lock.}
 
@@ -20,7 +20,7 @@
 + {not ftt2Officer} [Return.] -> Main
 
 == OpenHatch
-The intercom splutters intermittently; he's fumbling with the controls.
+The intercom splutters intermittently; he's fumbling with the controls. #sfx.intercomSplutter
 
 "... I uh... we're having some problems here... you might have guessed from the... the distress signal."
 

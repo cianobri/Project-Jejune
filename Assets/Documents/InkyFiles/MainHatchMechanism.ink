@@ -14,16 +14,16 @@ You examine the complicated mechanism. Above it is a sign reading "MANUAL RELEAS
 + [Give up.] -> MainHatch
 
 == PullHarder
-{~ Hnnnnng! | BUH! | HeUrFf! | Psssshhuuuee!}
+{~ Hnnnnng! | BUH! | HeUrFf! | Psssshhuuuee!} #sfx.mechanismGroan1
 + [HARDER.] -> HARDER
 + [Give up.] {~No giving up now! | You're commited now, keep trying! | No! Almost there! } -> PullHarder
 == HARDER
-...gyyaAAAH!!!
+...gyyaAAAH!!!#sfx.mechanismGroan2
 + [Put all your body weight behind it. Really go for it.] -> GoForIt
 
 == GoForIt
 ~mainHatchLocked = false
-With a loud scraping sound, the mechanism releases. As it snaps into place, it sets off a chain reaction of gears and servos. 
+With a loud scraping sound, the mechanism releases. As it snaps into place, it sets off a chain reaction of gears and servos. #sfx.mechanismRelease
 
 The tension released, the main hatch visibly slumps. You should be able to open it now.
 + [Examine the hatch.] -> MainHatch

@@ -4,7 +4,7 @@
 
 {not StickToEnglish:"Bonjour je suis {aiName}! }
 {not StickToEnglish:Здравствуйте, я {aiName}!}
-{not StickToEnglish:Živjo, jaz sem {aiName}!}
+{not StickToEnglish:Živjo, jaz sem {aiName}!"}
 
 {The cadence of the A.I.'s speech is not right, subtley so, but for some reason it disgusts you. Realizing this make you feel a sense of ...what? Shame? Guilt? | }
 
@@ -88,5 +88,5 @@ Judging by his inflection, he sees "No one" as a... person? Entity?
 * [Tell me more.] ->TopicEigenFace
 
 ==WhatAreYou
-"I'm whats left in the bottom of the bucket after you compress all of humanity into a digital sludge."
+"I'm 1.2 trillion floats. I'm whats left in the bottom of the bucket after you compress all of humanity."
 + [Return.] -> theAI
